@@ -1,0 +1,26 @@
+{% extends "base_generic.html" %} {% block content %}
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Reddit+Mono:wght@200..900&display=swap"
+  rel="stylesheet"
+/>
+<h1>Local Library Home</h1>
+<p>
+  Welcome to LocalLibrary, a website developed by
+  <em>Mozilla Developer Network</em>!
+</p>
+<img src="books.jpg" alt="Books" width="500" height="600" />
+<h2>Dynamic content</h2>
+<p>The library has the following record counts:</p>
+<ul>
+  <li><strong>Books:</strong> {{ num_books }}</li>
+  <li><strong>Copies:</strong> {{ num_instances }}</li>
+  <li><strong>Copies available:</strong> {{ num_instances_available }}</li>
+  <li><strong>Authors:</strong> {{ num_authors }}</li>
+</ul>
+
+<p>
+  You have visited this page {{ num_visits }} time{{ num_visits|pluralize }}
+</p>
+{% endblock %}
